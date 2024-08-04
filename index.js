@@ -101,10 +101,10 @@ async function main() {
 //body parsar
 server.use(cors());
 server.use(express.json())
-server.use(express.static(Path.resolve(__dirname, process.env.PUBLIC_DIR)))
+server.use(express.static(Path.join(__dirname, process.env.PUBLIC_DIR)))
 server.use("/products", productRouter.Router)
 server.use("*", (req, res) => {
-    res.sendFile(Path.resolve(__dirname, 'dist', 'index.html'))
+    res.sendFile(Path.join(__dirname, 'dist', 'index.html'))
 })
 
 
