@@ -20,7 +20,7 @@
         "dest": "index.js"
       },
       {
-        "src": "/add",
+        "src": "/form",
         "dest": "dist/index.html"
       },
       {
